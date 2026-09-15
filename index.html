@@ -1214,10 +1214,22 @@
       opacity: 1;
     }
 
+.form-status.loading{
+  color:#fbe3a1;
+  background:rgba(234, 168, 14, 0.08);
+  border:1px solid rgba(232,184,75,.25);
+}
+
     .form-status.success {
-      color: #fbe3a1;
-      background: rgba(232, 184, 75, .07);
-      border: 1px solid rgba(232, 184, 75, .18);
+      color:#d9ffe3;
+  background:linear-gradient(
+    135deg,
+    rgba(1, 255, 94, 0.28),
+    rgba(0, 255, 102, 0.24)
+  );
+  border:1px solid rgba(92,220,139,.58);
+  box-shadow:0 0 18px rgba(74,190,115,.12);
+  font-weight:500;
     }
 
     .form-status.error {
@@ -1676,7 +1688,7 @@
       transform: translateY(0);
     }
 
-    .form-status.success {
+    /* .form-status.success {
       color: #fbe3a1;
       background: rgba(232, 184, 75, .07);
       border: 1px solid rgba(232, 184, 75, .22);
@@ -1686,7 +1698,7 @@
       color: #ffd1c9;
       background: rgba(130, 35, 25, .12);
       border: 1px solid rgba(255, 140, 125, .2);
-    }
+    } */
 
     .rsvp-note {
       position: relative;
@@ -4077,7 +4089,7 @@
           <div class="section-title">Catatan</div>
           <ul class="notes-list">
             <li>Undangan hanya berlaku untuk 1 (satu) orang.</li>
-            <li>Mohon dibawa saat menghadiri Wisuda ke XVII Elizabeth International untuk mendapatkan tempat parkir
+            <li>Mohon membawa kartu undangan saat menghadiri Wisuda ke XVII Elizabeth International untuk mendapatkan tempat parkir
               khusus (VIP).</li>
             <li>Kami mohon kesediaannya untuk hadir tepat waktu.</li>
           </ul>
@@ -4381,7 +4393,7 @@
         btn.disabled = true;
         btn.textContent = 'Mengirim Konfirmasi...';
         status.textContent = 'Data sedang dikirim...';
-        status.className = 'form-status success';
+        status.className = 'form-status loading';
 
         // Karena Apps Script dapat melakukan redirect, kita tidak membaca
         // response dari iframe. Jika form berhasil submit, tampilkan sukses.
