@@ -3783,7 +3783,7 @@
           <div class="video-frame teaser-ready has-media" id="teaserVideoFrame">
             <video id="teaserVideo" autoplay muted loop playsinline preload="metadata">
               <source
-                src="../kecil.mp4"
+                src="./assets/teaser-wisuda.mp4"
                 type="video/mp4">
             </video>
             <div class="video-placeholder" id="teaserVideoFallback">
@@ -4292,7 +4292,7 @@
       items.forEach(function (el) {io.observe(el);});
     })();
 
-    // Video teaser remote: autoplay muted. Jika sumber gagal dimuat, tampilkan placeholder.
+    // Video teaser lokal: autoplay muted. Jika asset gagal dimuat, tampilkan placeholder.
     (function () {
       var teaser = document.getElementById('teaserVideo');
       var frame = document.getElementById('teaserVideoFrame');
